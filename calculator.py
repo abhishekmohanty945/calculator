@@ -25,8 +25,8 @@ operator = " "
 text_input = StringVar()
 
 textDisplay = Entry(calculator, font = ("ariel", 20, "bold"),             
-                    textvariable = text_input, bd = 30, insertwidth = 4, bg = "#EEEEEE",
-                    justify = "right").grid(columnspan = 5)
+                    textvariable = text_input, bd = 30, insertwidth = 3, bg = "#EEEEEE",
+                    justify = "right").grid(columnspan = 4)
 
 ######################################################################################################################
 
@@ -73,16 +73,19 @@ addition = Button(calculator, padx = 16, pady = 16,bd = 10, fg = "black", font =
 ######################################################################################################################
 
 clear = Button(calculator, padx = 16, pady = 16,bd = 10, fg = "black", font = ("arial", 20, "bold"),
-                 text = "C", bg = "light grey", command = lambda: clearall()).grid(row = 4, column = 1)
+                 text = "C", bg = "light grey", command = lambda: clearall()).grid(row = 1, column = 4)
 
 button0 = Button(calculator, padx = 16, pady = 16,bd = 10, fg = "black", font = ("arial", 20, "bold"),
                  text = "0", bg = "light grey", command = lambda: buttonclick(0)).grid(row = 4, column = 2)
 
 equals = Button(calculator, padx = 16, pady = 16,bd = 10, fg = "black", font = ("arial", 20, "bold"),
-                 text = "=", bg = "light grey", command = equals).grid(row = 4, column = 3)
+                 text = "=", bg = "light grey", command = equals).grid(row = 4, column =1 )
 
 substraction = Button(calculator, padx = 16, pady = 16,bd = 10, fg = "black", font = ("arial", 20, "bold"),
                  text = "-", bg = "light grey", command = lambda: buttonclick("-")).grid(row = 4, column = 4)
+
+modulo = Button(calculator, padx = 16, pady = 16,bd = 10, fg = "black", font = ("arial", 20, "bold"),
+                 text = "%", bg = "light grey", command = lambda: buttonclick("%")).grid(row = 4, column = 3)
 
 ######################################################################################################################
 
